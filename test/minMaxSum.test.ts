@@ -1,4 +1,4 @@
-import { minMaxSum, MinMaxInterface } from './../logica/miniMaxSum';
+import { minMaxSum, MinMaxInterface, simpleArraySum } from './../logica/miniMaxSum';
 
 
 describe('minMaxSum', () => {
@@ -13,6 +13,11 @@ describe('minMaxSum', () => {
         const arr = [1, 2, 3, 4, 5];
         const valueSum: MinMaxInterface = minMaxSum(arr);
         expect(valueSum).toEqual({min: 10, max: 14})
+    });
+    test('Deve somar os valores do array - simpleArraySum', () => {
+        const arr = [1, 2, 3, 4, 5];
+        expect(simpleArraySum(arr)).toEqual(15)
+        expect(simpleArraySum([1,2,3,4,10,11])).toEqual(31)
     });
   
   });
